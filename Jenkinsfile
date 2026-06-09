@@ -58,7 +58,7 @@ pipeline {
         success {
             script {
                 try {
-                    mail to: '4king2will0@gmail.com',
+                    mail to: '<your gmail id>',
                          subject: "✅ Jenkins SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                          body: """
 Build SUCCESS 🎉
@@ -77,7 +77,7 @@ URL: ${env.BUILD_URL}
         failure {
             script {
                 try {
-                    mail to: '4king2will0@gmail.com',
+                    mail to: '<your gamil id>',
                          subject: "❌ Jenkins FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                          body: """
 Build FAILED ❌
