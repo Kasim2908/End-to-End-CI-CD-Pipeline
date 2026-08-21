@@ -1,94 +1,59 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("🚀 CI/CD Deployment Dashboard loaded");
+    console.log("🚀 CI/CD Dashboard loaded successfully");
 
     /*
-     * Simulate a live health-status check.
-     * This is only a frontend demonstration.
+     * Deployment simulation
      */
 
-    const deploymentStatus =
-        document.querySelector(".deployment-status");
+    window.deploy = function () {
 
-    if (deploymentStatus) {
+        const status = document.getElementById("status");
+
+        if (!status) {
+            return;
+        }
+
+        status.textContent = "⏳ Deployment in progress...";
+
+        status.className = "status pending";
 
         setTimeout(() => {
 
-            deploymentStatus.innerHTML = `
-                <span class="pulse"></span>
-                Pipeline deployed successfully
-            `;
+            status.textContent = "✅ Deployment Successful!";
 
-        }, 1000);
-    }
+            status.className = "status success";
+
+        }, 2000);
+    };
 
 
     /*
-     * Animate pipeline cards when they enter
-     * the viewport.
+     * Add a small entrance animation
+     * to pipeline cards and steps.
      */
 
-    const cards =
-        document.querySelectorAll(
-            ".pipeline-card, .status-card, .step, .tech-card"
-        );
+    const animatedElements = document.querySelectorAll(
+        ".pipeline-card, .status-card, .step, .technology-card"
+    );
 
+    animatedElements.forEach((element, index) => {
 
-    const observer =
-        new IntersectionObserver(
-            (entries) => {
+        element.style.opacity = "0";
 
-                entries.forEach((entry) => {
+        element.style.transform = "translateY(20px)";
 
-                    if (entry.isIntersecting) {
+        element.style.transition =
+            "opacity 0.5s ease, transform 0.5s ease";
 
-                        entry.target.style.opacity = "1";
-                        entry.target.style.transform = "translateY(0)";
+        setTimeout(() => {
 
-                    }
+            element.style.opacity = "1";
 
-                });
+            element.style.transform = "translateY(0)";
 
-            },
-            {
-                threshold: 0.15
-            }
-        );
-
-
-    cards.forEach((card) => {
-
-        card.style.opacity = "0";
-
-        card.style.transform =
-            "translateY(20px)";
-
-        card.style.transition =
-            "opacity 0.6s ease, transform 0.6s ease";
-
-        observer.observe(card);
+        }, index * 100);
 
     });
-
-
-    /*
-     * Display current deployment time.
-     */
-
-    const deploymentTime =
-        document.querySelector(".deployment-time");
-
-
-    if (deploymentTime) {
-
-        const now = new Date();
-
-        const formattedTime =
-            now.toLocaleString();
-
-        deploymentTime.textContent =
-            `🚀 Dashboard loaded: ${formattedTime}`;
-
-    }
 
 });
