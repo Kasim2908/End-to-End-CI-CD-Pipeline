@@ -1,161 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CI/CD Pipeline | DevOps Project</title>
+
+    <meta name="description"
+        content="End-to-End CI/CD Pipeline using GitHub, Jenkins, Docker, Docker Hub and AWS EC2">
+
+    <title>CI/CD Pipeline Dashboard</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1>🚀 End-to-End CI/CD Pipeline</h1>
+    <!-- HERO -->
+    <header class="hero">
 
-    <p>
-        Automated software delivery from
-        <strong>GitHub → Jenkins → Docker → Docker Hub → AWS EC2</strong>
-    </p>
+        <div class="container">
 
-    <p>Pipeline deployed successfully</p>
+            <div class="live-badge">
+                <span class="live-dot"></span>
+                LIVE DEPLOYMENT
+            </div>
 
-    <p>🚀 Latest deployment: Automated via Jenkins</p>
-</header>
+            <h1>
+                End-to-End
+                <span>CI/CD Pipeline</span>
+            </h1>
+
+            <p class="hero-text">
+                Automated software delivery from
+                <strong>GitHub → Jenkins → Docker → Docker Hub → AWS EC2</strong>
+            </p>
+
+            <div class="hero-status">
+                <span class="status-dot"></span>
+                Pipeline deployed successfully
+            </div>
+
+            <p class="hero-small">
+                🚀 Automated deployment powered by Jenkins
+            </p>
+
+        </div>
+
+    </header>
 
 
-<main>
+    <!-- MAIN -->
+    <main>
 
-    <!-- Pipeline Overview -->
-    <section>
-        <h2>Pipeline Overview</h2>
+        <!-- PIPELINE -->
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <span class="section-number">01</span>
+
+                    <div>
+                        <h2>Pipeline Overview</h2>
+
+                        <p>
+                            From source code to production deployment.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="pipeline">
+
+                    <!-- GitHub -->
+                    <div class="pipeline-card">
+
+                        <div class="pipeline-icon github-icon">
+                            GIT
+                        </div>
+
+                        <h3>GitHub</h3>
+
+                        <p>Source Control</p>
+
+                        <span class="badge success-badge">
+                            ✓ Connected
+                        </span>
+
+                    </div>
+
+
+                    <div class="pipeline-arrow">
+                        →
+                    </div>
+
+
+                    <!-- Jenkins -->
+                    <div class="pipeline-card">
+
+                        <div class="pipeline-icon jenkins-icon">
+                            ⚙
+                        </div>
+
+                        <h3>Jenkins</h3>
+
+                        <p>CI/CD Automation</p>
+
+                        <span class="badge success-badge">
+                            ✓ Running
+                        </span>
+
+                    </div>
+
+
+                    <div class="pipeline-arrow">
+                        →
+                    </div>
+
+
+                    <!-- Docker -->
+                    <div class="pipeline-card">
+
+                        <div class="pipeline-icon docker-icon">
+                            🐳
+                        </div>
+
+                        <h3>Docker</h3>
+
+                        <p>Container Build</p>
+
+                        <span class="badge success-badge">
+                            ✓ Built
+                        </span>
+
+                    </div>
+
+
+                    <div class="pipeline-arrow">
+                        →
+                    </div>
+
+
+                    <!-- Docker Hub -->
+                    <div class="pipeline-card">
+
+                        <div class="pipeline-icon hub-icon">
+                            HUB
+                        </div>
+
+                        <h3>Docker Hub</h3>
+
+                        <p>Image Registry</p>
+
+                        <span class="badge success-badge">
+                            ✓ Pushed
+                        </span>
+
+                    </div>
+
+
+                    <div class="pipeline-arrow">
+                        →
+                    </div>
+
+
+                    <!-- AWS -->
+                    <div class="pipeline-card">
+
+                        <div class="pipeline-icon aws-icon">
+                            AWS
+                        </div>
+
+                        <h3>AWS EC2</h3>
+
+                        <p>Cloud Deployment</p>
+
+                        <span class="badge success-badge">
+                            ✓ Deployed
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DEPLOYMENT STATUS -->
+        <section class="dark-section">
+
+            <div class="container">
+
+                <div class="section-title dark-title">
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <div>
+                        <h2>Deployment Status</h2>
+
+                        <p>
+                            Current application environment.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="status-grid">
+
+                    <div class="status-card">
+
+                        <div class="status-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <span>BUILD STATUS</span>
+                            <h3>SUCCESS</h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="status-card">
+
+                        <div class="status-icon">
+                            🐳
+                        </div>
+
+                        <div>
+                            <span>CONTAINER</span>
+                            <h3>RUNNING</h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="status-card">
+
+                        <div class="status-icon">
+                            ☁
+                        </div>
+
+                        <div>
+                            <span>ENVIRONMENT</span>
+                            <h3>AWS EC2</h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="status-card">
+
+                        <div class="status-icon">
+                            ♥
+                        </div>
+
+                        <div>
+                            <span>HEALTH CHECK</span>
+                            <h3>HEALTHY</h3>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AUTOMATION -->
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <h2>How Automation Works</h2>
+
+                        <p>
+                            The complete deployment workflow.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="steps">
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <div>
+                            <h3>Push Code</h3>
+
+                            <p>
+                                Developer pushes changes to GitHub.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <div>
+                            <h3>Webhook Trigger</h3>
+
+                            <p>
+                                GitHub automatically triggers Jenkins.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <div>
+                            <h3>Build Image</h3>
+
+                            <p>
+                                Jenkins builds the Docker image.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            04
+                        </div>
+
+                        <div>
+                            <h3>Push Image</h3>
+
+                            <p>
+                                Versioned image is pushed to Docker Hub.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            05
+                        </div>
+
+                        <div>
+                            <h3>Deploy</h3>
+
+                            <p>
+                                Container is deployed on AWS EC2.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            06
+                        </div>
+
+                        <div>
+                            <h3>Health Check</h3>
+
+                            <p>
+                                Jenkins verifies the application.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TECHNOLOGIES -->
+        <section class="section technologies">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <span class="section-number">
+                        04
+                    </span>
+
+                    <div>
+
+                        <h2>Technology Stack</h2>
+
+                        <p>
+                            Tools used in this DevOps project.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="technology-grid">
+
+                    <div class="technology-card">
+                        <strong>GitHub</strong>
+                        <span>Source Control</span>
+                    </div>
+
+                    <div class="technology-card">
+                        <strong>Jenkins</strong>
+                        <span>CI/CD Automation</span>
+                    </div>
+
+                    <div class="technology-card">
+                        <strong>Docker</strong>
+                        <span>Containerization</span>
+                    </div>
+
+                    <div class="technology-card">
+                        <strong>Docker Hub</strong>
+                        <span>Container Registry</span>
+                    </div>
+
+                    <div class="technology-card">
+                        <strong>AWS EC2</strong>
+                        <span>Cloud Infrastructure</span>
+                    </div>
+
+                    <div class="technology-card">
+                        <strong>Linux</strong>
+                        <span>Server Environment</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="cta">
+
+            <div class="container">
+
+                <h2>
+                    From Code Commit to Production 🚀
+                </h2>
+
+                <p>
+                    Automated. Containerized. Continuously deployed.
+                </p>
+
+                <div class="cta-flow">
+
+                    <span>GitHub</span>
+                    <b>→</b>
+
+                    <span>Jenkins</span>
+                    <b>→</b>
+
+                    <span>Docker</span>
+                    <b>→</b>
+
+                    <span>Docker Hub</span>
+                    <b>→</b>
+
+                    <span>AWS EC2</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
 
         <p>
-            Every code push automatically triggers the complete CI/CD workflow.
+            Built as an End-to-End DevOps CI/CD Project
         </p>
 
-        <div class="pipeline-flow">
+        <small>
+            GitHub • Jenkins • Docker • Docker Hub • AWS
+        </small>
 
-            <div class="pipeline-card">
-                <div class="icon">🐙</div>
-                <h3>GitHub</h3>
-                <p>Source Code</p>
-            </div>
-
-            <div class="arrow">→</div>
-
-            <div class="pipeline-card">
-                <div class="icon">⚙️</div>
-                <h3>Jenkins</h3>
-                <p>CI/CD Automation</p>
-            </div>
-
-            <div class="arrow">→</div>
-
-            <div class="pipeline-card">
-                <div class="icon">🐳</div>
-                <h3>Docker</h3>
-                <p>Container Build</p>
-            </div>
-
-            <div class="arrow">→</div>
-
-            <div class="pipeline-card">
-                <div class="icon">📦</div>
-                <h3>Docker Hub</h3>
-                <p>Image Registry</p>
-            </div>
-
-        </div>
-    </section>
+    </footer>
 
 
-    <!-- Deployment Status -->
-    <section class="info">
-
-        <h2>Deployment Status</h2>
-
-        <div id="status" class="status pending">
-            Checking deployment...
-        </div>
-
-        <button onclick="deploy()">
-            🚀 Simulate Deployment
-        </button>
-
-    </section>
-
-
-    <!-- Deployment Information -->
-    <section class="dark-section">
-
-        <h2>☁️ AWS EC2 Deployment</h2>
-
-        <p>
-            The Docker container is deployed on an AWS EC2 instance
-            and exposed through port <strong>8081</strong>.
-        </p>
-
-        <div class="deployment-status">
-            ✓ Application Running
-        </div>
-
-    </section>
-
-
-    <!-- Technology Stack -->
-    <section>
-
-        <h2>🛠️ Technology Stack</h2>
-
-        <p>
-            Technologies used to build this automated deployment pipeline.
-        </p>
-
-        <div class="tech-grid">
-
-            <div class="tech-card">
-                <div class="icon">🐙</div>
-                <h3>GitHub</h3>
-                <p>Source Control</p>
-            </div>
-
-            <div class="tech-card">
-                <div class="icon">⚙️</div>
-                <h3>Jenkins</h3>
-                <p>CI/CD Automation</p>
-            </div>
-
-            <div class="tech-card">
-                <div class="icon">🐳</div>
-                <h3>Docker</h3>
-                <p>Containerization</p>
-            </div>
-
-            <div class="tech-card">
-                <div class="icon">☁️</div>
-                <h3>AWS EC2</h3>
-                <p>Cloud Deployment</p>
-            </div>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<footer>
-    <p>
-        Built with ❤️ as a DevOps CI/CD Project
-    </p>
-
-    <p>
-        <strong>GitHub → Jenkins → Docker → Docker Hub → AWS EC2</strong>
-    </p>
-</footer>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
