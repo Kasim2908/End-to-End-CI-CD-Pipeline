@@ -239,7 +239,7 @@ pipeline {
                 try {
 
                     emailext(
-                        to: '4king2will0@gmail.com',
+                        to: 'your_username@gmail.com',
 
                         subject: "✅ Jenkins SUCCESS - ${env.JOB_NAME} #${env.BUILD_NUMBER}",
 
